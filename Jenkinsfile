@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        RECIPIENT_EMAIL = "namquang.study@gmail.com"
+        RECIPIENT_EMAIL = "thinhtruongkhanguyen1404@gmail.com"
         LOG_FILE_PATH = "logs/build-log.txt"
     }
 
@@ -10,7 +10,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Build the code using 'CMake'."
-                //sh 'cmake --build
             }
         }
 
@@ -18,7 +17,6 @@ pipeline {
             steps {
                 echo "Run unit tests to ensure code functionality and integration tests to ensure components work together, then send the status to the email."
                 echo "Using Ctest from CMake"
-                //sh 'cd build && ctest --output-on-failure'
             }
             post {
                 always {
